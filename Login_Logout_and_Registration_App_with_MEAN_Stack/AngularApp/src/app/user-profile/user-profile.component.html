@@ -1,0 +1,24 @@
+<table *ngIf="userDetails" id="customers">
+<thead>
+    <tr>
+        <th colspan="2">Use Profile</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>First Name:</td>
+        <td>{{userDetails.fullName.split(' ')[0]}}</td>
+    </tr>
+    <tr>
+        <td>Last Name:</td>
+        <td>{{userDetails.fullName.split(' ')[1]}}</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>{{userDetails.email}}</td>
+    </tr>
+</tbody>
+</table>
+<div>
+    <input type="button" (click)="onLogout()" value="Log Out">
+</div>
